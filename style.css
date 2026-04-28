@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    background: #050505;
+    color: #00ffcc;
+    font-family: monospace;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.glitch {
+    font-size: 50px;
+    position: relative;
+    color: #ff0033;
+}
+
+.subtitle {
+    color: #aaa;
+}
+
+/* glitch effect */
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+}
+
+.glitch::before {
+    color: red;
+    animation: glitchTop 1s infinite;
+}
+
+.glitch::after {
+    color: cyan;
+    animation: glitchBottom 1s infinite;
+}
+
+@keyframes glitchTop {
+    0% { transform: translate(2px, -2px); }
+    50% { transform: translate(-2px, 2px); }
+    100% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitchBottom {
+    0% { transform: translate(-2px, 2px); }
+    50% { transform: translate(2px, -2px); }
+    100% { transform: translate(-2px, 2px); }
+}
+
+/* terminal */
+.terminal {
+    background: #000;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #00ffcc;
+    height: 150px;
+    overflow: hidden;
+}
+
+/* content */
+.content {
+    text-align: center;
+    padding: 40px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #444;
+}
